@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, #0076ec, #42a1ff);
+}
+.container {
+  width: 80vw;
+  max-width: 37.5em;
+  background-color: #ffffff;
+  padding: 3em 1.8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.6em;
+  box-shadow: 0 0.6em 2.5em rgba(0, 7, 70, 0.2);
+}
+.container img {
+  width: 6.25em;
+  display: block;
+  margin: auto;
+}
+#location-details {
+  font-size: 1.75em;
+  text-align: center;
+  margin: 1em 0 1.7em 0;
+  color: #021d38;
+  font-weight: 500;
+}
+.container button {
+  display: block;
+  margin: auto;
+  background-color: #42a1ff;
+  color: #ffffff;
+  border: none;
+  font-size: 1.25em;
+  padding: 1em 2.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+    </style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get User Location</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+     
+      <div id="location-details">Click on the 'Get Location' Button</div>
+      <button id="get-location">Get Location</button>
+    </div>
+    <!-- Script -->
+   <script>
+    let locationButton = document.getElementById("get-location");
+let locationDiv = document.getElementById("location-details");
+
+locationButton.addEventListener("click", () => {
+  //Geolocation APU is used to get geographical position of a user and is available inside the navigator object
+  if (navigator.geolocation) {
+    //returns position(latitude and longitude) or error
+    navigator.geolocation.getCurrentPosition(showLocation, checkError);
+  } else {
+    //For old browser i.e IE
+    locationDiv.innerText = "The browser does not support geolocation";
+  }
+});
+
+//Error Checks
+const checkError = (error) => {
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      locationDiv.innerText = "Please allow access to location";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      //usually fired for firefox
+      locationDiv.innerText = "Location Information unavailable";
+      break;
+    case error.TIMEOUT:
+      locationDiv.innerText = "The request to get user location timed out";
+  }
+};
+
+const showLocation = async (position) => {
+  //We user the NOminatim API for getting actual addres from latitude and longitude
+  let response = await fetch(
+    `https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`
+  );
+  //store response object
+  let data = await response.json();
+  console.log(data)
+  locationDiv.innerText = `${data.address.suburb},${data.address.city}, ${data.address.country}`;
+};
+   </script>
+  </body>
+</html>

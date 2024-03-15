@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urja</title>
+    <style>
+        /* Reset default margin */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgb(12, 0, 47);
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+        }
+
+        .nav-search input {
+            width: 300px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .search-icon {
+            width: 45px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: solid black 2px;
+            color: black;
+            cursor: pointer;
+        }
+
+        /* Logo Style */
+        .logo {
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Sign In and Cart Styles */
+        .sign-in, .cart {
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Home Section Styles */
+        .home {
+            background-image: url("Backgroud.png");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        }
+
+        .msg {
+            background-color: rgb(160, 176, 229);
+            width: 80%;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid black 2px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            background-image: linear-gradient(to bottom, rgb(201, 221, 188), rgb(0, 128, 0));
+            padding: 20px 0;
+        }
+
+        /* Box Styles */
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box-img {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box-title {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Footer Links Styles */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #bbb;
+        }
+
+        /* Footer Bottom Styles */
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.8em;
+            background-color: #111;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body onload="getLocation()">
+    <div class="navbar">
+        <div class="logo">Urja.</div>
+        <div class="nav-search">
+            <input placeholder="Search" type="text">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="sign-in">
+            <a href="register.html">Sign in</a>
+        </div>
+        <div class="cart">
+            <a href="aboutus.html">Contact us</a>
+        </div>
+    </div>
+
+    <div class="home">
+        <div class="msg">
+            <p>All types of Green Energy products are available</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="main">
+            <div class="box" style="background-image: url('bulb.png');">
+                <div class="box-title">SOLAR BULBS</div>
+            </div>
+            <div class="box" style="background-image: url('cooker.png');">
+                <div class="box-title">SOLAR COOKERS</div>
+            </div>
+            <div class="box" style="background-image: url('fan.png');">
+                <div class="box-title">SOLAR FANS</div>
+            </div>
+            <div class="box" style="background-image: url('lamp.png');">
+                <div class="box-title">SOLAR LAMPS</div>
+            </div>
+            <!-- Add more boxes here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-popular">
+            <h3>Popular</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Connect with Us</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>Email: example@example.com</li>
+                <li>Phone: 123-456-7890</li>
+                <li>Address: 123 Street, City, Country</li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-services">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">
