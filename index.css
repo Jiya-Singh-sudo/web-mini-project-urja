@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 *{
     margin: 0px;
@@ -228,3 +229,235 @@ footer {
 }
 
 
+=======
+
+*{
+    margin: 0px;
+}
+.navbar{
+    background-color: rgb(12, 0, 47);
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+
+}
+
+.nav-search{
+    color: white;
+    
+}
+.nav-search input{
+    width: 400px;
+}
+.search-icon{
+    
+ width: 45px;
+display: inline;
+padding: 2px;
+padding-left: 5px;
+padding-right: 5px;
+background-color: #ffffff;
+border-radius: 5px;
+border: solid black 2px;
+color: black;
+}
+.logo{
+    
+   color: white;
+    /* width: 100px; */
+}
+.sign-in{
+  
+   color: rgb(255, 255, 255);
+   
+}
+.cart{
+    color: white;
+}
+.home{
+    
+    background-image: url("Backgroud.png");
+    
+    background-size: contain;
+   
+    height: 400px;
+   
+   
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    
+    
+    }
+    .msg{
+       
+        background-color: rgb(160, 176, 229);
+         width: 80%;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+        border: solid black 2px;
+    
+        
+    }
+    .main{
+        display: flex;
+       
+    }
+    .box{
+        /* border: solid black 2px; */
+        width: 400px;
+        height: 450px;
+        margin: 30px;
+         border-radius: 10px; 
+         border: 2px solid black;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.5);
+
+        
+    }
+    .box:hover {
+        transform: scale(1.1);
+    }
+
+    .section{background-image: linear-gradient(to bottom, rgb(201, 221, 188), rgb(0, 128, 0));
+
+    }
+    .box-img{
+        height: 300px;
+        background-size: cover;
+        margin: 15px;
+    }
+    .box-tittle {
+        margin: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+#video {
+    width: 50%; /* Default video width */
+    height: 50%; /* Maintain aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    #video {
+        width: 50%; /* Adjust video width for smaller screens */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    border-top: 5px solid white;
+
+   
+   
+}
+
+/* Popular Items */
+.footer-popular {
+    margin-bottom: 20px;
+}
+.footer-popular h3 {
+    margin-bottom: 10px;
+}
+
+.footer-popular ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-popular ul li {
+    margin-bottom: 5px;
+}
+
+.footer-popular ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-popular ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Sections */
+.footer-content, .footer-social, .footer-services {
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.footer-content h3, .footer-social h3, .footer-services h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content ul, .footer-social ul, .footer-services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li, .footer-social ul li, .footer-services ul li {
+    margin-bottom: 5px;
+}
+
+.footer-content ul li a, .footer-social ul li a, .footer-services ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content ul li a:hover, .footer-social ul li a:hover, .footer-services ul li a:hover {
+    text-decoration: underline;
+}
+.footer-popular {
+    margin-left: 20px; /* Adjust the left margin */
+    margin-right: 20px; /* Adjust the right margin */
+}
+.footer-popular, .footer-content, .footer-services {
+    margin-bottom: 20px; /* Add a bottom margin to create a gap */
+    margin-left: 50px;
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .nav-search input {
+        width: 50%; /* Make the search input full width */
+    }
+    .main {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center align boxes */
+    }
+    .box {
+        width: 80%; /* Adjust box width */
+        margin: 15px 0; /* Adjust box margin */
+    }
+    #video {
+        width: 100%; /* Make the video full width */
+        height: auto; /* Reset height for responsiveness */
+    }
+    .home{
+        width: 100%;
+    }
+}
+
+
+>>>>>>> origin/main
