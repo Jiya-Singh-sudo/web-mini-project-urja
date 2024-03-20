@@ -73,7 +73,7 @@
 
 <div class="feedback-container">
   <h2>Feedback Form</h2>
-  <form id="feedbackForm" onsubmit="return submitForm()">
+  <form id="feedbackForm" onsubmit="return submitForm()" action="index.php" method="post" name="feedbackForm">
     <div class="form-group">
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name">
@@ -105,11 +105,11 @@
       <span id="ratingError" class="error"></span>
     </div>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" name="submit">
     <div id="successMessage" class="success-message" style="display: none;">Feedback submitted successfully!</div>
   </form>
 </div>
-<script>
+<!-- <script>
     function submitForm() {
       var name = document.getElementById("name").value;
       var email = document.getElementById("email").value;
@@ -119,7 +119,8 @@
       var isValid = true;
     
       if (name === "") {
-        document.getElementById("nameError").innerHTML = "Name is required";
+        document.getElementById("nameError").innerHTML = 
+        "Name is required";
         isValid = false;
       } else {
         document.getElementById("nameError").innerHTML = "";
@@ -155,6 +156,40 @@
       }
     
       return false; // Prevent default form submission
+    }
+    </script> -->
+
+    <script>
+      function submitForm() {
+      var name = document.feedbackForm.name.value;
+      var email = document.feedbackForm.email.value;
+      var feedback = document.feedbackForm.feedback.value;
+      var rating = document.feedbackForm.rating.value;
+
+      if (name === "") {
+        alert("Name cant be blank");
+        return false;
+      }
+
+      else if (email === "") {
+        alert("email cant be blank");
+        return false;
+      }
+     else  if (feedback === "") {
+        alert("feedback can't be blank");
+        return false;
+      }
+     else  if (rating === "") {
+        alert("rating can't be blank");
+        return false;
+      }
+      else{
+        alert("feedback successfull");
+        return false;
+      }
+
+     
+
     }
     </script>
     
