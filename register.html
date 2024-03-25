@@ -27,9 +27,13 @@
     <div class="register-container">
         <h2>Create Account</h2>
         <form id="registerForm">
-            <div class="input-group">
+            <div class="input-group"><div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" pattern="/^[a-zA-Z0-9_]{3,20}$/" placeholder="Username" required>
+            </div>
+                <div class="input-group">
                 <label for="yourname">Your name:</label>
-                <input type="text" id="yourname" name="yourname" placeholder="First and last name" required>
+                <input type="text" id="yourname" name="yourname" pattern="/^[a-zA-Z\s]+$/" placeholder="First and last name" required>
             </div>
             <div class="input-group">
                 <label for="mobile-number">Mobile number:</label>
@@ -37,7 +41,7 @@
             </div>
             <div class="input-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="At least 6 characters" required>
+                <input type="password" id="password" name="password" pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/" placeholder="At least 6 characters" required>
             </div>
             <div class="sign-in">
                 <label>Already have an account?<a href="login.html"> Sign in</a></label>
