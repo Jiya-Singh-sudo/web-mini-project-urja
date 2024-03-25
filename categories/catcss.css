@@ -1,0 +1,83 @@
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    border-top: 5px solid white;
+
+   
+   
+}
+
+/* Popular Items */
+.footer-popular {
+    margin-bottom: 20px;
+}
+.footer-popular h3 {
+    margin-bottom: 10px;
+}
+
+.footer-popular ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-popular ul li {
+    margin-bottom: 5px;
+}
+
+.footer-popular ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-popular ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Sections */
+.footer-content, .footer-social, .footer-services {
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.footer-content h3, .footer-social h3, .footer-services h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content ul, .footer-social ul, .footer-services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li, .footer-social ul li, .footer-services ul li {
+    margin-bottom: 5px;
+}
+
+.footer-content ul li a, .footer-social ul li a, .footer-services ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content ul li a:hover, .footer-social ul li a:hover, .footer-services ul li a:hover {
+    text-decoration: underline;
+}
+.footer-popular {
+    margin-left: 20px; /* Adjust the left margin */
+    margin-right: 20px; /* Adjust the right margin */
+}
+.footer-popular, .footer-content, .footer-services {
+    margin-bottom: 20px; /* Add a bottom margin to create a gap */
+    margin-left: 50px;
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8em;
+}
